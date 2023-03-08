@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Login - Neon</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="form-wrapper sign-in">
+                <form action="">
+                    <h2>Login</h2>
+                    <div class="input-group">
+                        <input type="text" required />
+                        <label for="">Usuário</label>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="password" required />
+                       <label for="">Senha</label>
+                    </div>
+
+                    <div class="remember">
+                        <label for="">
+                            <input type="checkbox"/> 
+                            Lembrar
+                        </label>
+                    </div>
+                    <button type="submit">Login</button>
+
+                    <div class="signUp-link">
+                        <p>Não possui uma conta? <a href="#" class="signUpBtn-link">Inscrever-se</a></p>
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="form-wrapper sign-up">
+                <form action="">
+                    <h2>Cadastro</h2>
+                        <div class="input-group">
+                            <input type="text" required/>
+                            <label for="">Usuário</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" required />
+                            <label for="">Email</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="password" required />
+                            <label for="">Senha</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="password" required />
+                            <label for="">Confirme a sua Senha</label>
+                        </div>
+                    
+                    <div class="remember">
+                        <label>
+                            <input type="checkbox" />
+                            Eu concordo com os termos e condições para usar a plataforma.
+                        </label>
+                    </div>
+                    <button type="submmit">Cadastrar</button>
+                    <div class="signUp-link">
+                        <p>Ja possui uma conta? <a href="#" class="signInBtn-link">Entrar</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
