@@ -20,14 +20,24 @@ body{
 .wrapper{
     position: relative;
     width: 400px;
-    height: 500px;
+    height: 585px;
     background: #000;
     box-shadow: 0 0 150px #0ef;
     border-radius: 20px;
     padding: 40px;
+    overflow: hidden;
 }
 
+.wrapper:hover{
+    animation: animate 1s linear infinite;
+}
 
+@keyframes animate{
+    100%
+    {
+        filter: hue-rotate(360deg);
+    }
+}
 
 .form-wrapper{
     display: flex;
@@ -35,15 +45,21 @@ body{
     align-items: center;
     width: 100%;
     height: 100%;
-    transition: 1s ease=in-out;
+    transition: 1s ease-in-out;
 }
 
 .wrapper.active .form-wrapper.sign-in{
-    transform: transformY(-450px)
+    transform: translateY(-450px);
 }
 
 .wrapper .form-wrapper.sign-up{
-    
+    /*position: absolute;*/
+    top: 450px;
+    left: 0;
+}
+
+.wrapper.active .form-wrapper.sign-up{
+    transform: translateY(-450px);
 }
 
 h2{
