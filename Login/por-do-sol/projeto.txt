@@ -1,7 +1,0 @@
-link do tutorial:
-https://www.youtube.com/watch?v=KL4--AJrJHQ&t=1s
-
-
-Box Icons:
-https://boxicons.com/?query=search
-
