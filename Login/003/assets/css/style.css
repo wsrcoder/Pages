@@ -1,0 +1,192 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --color-light-50: #f8fafc;
+    
+    --color-dark-50: #797884;
+    --color-dark-100: #312d37;
+    --color-dark-900: #000;
+
+    --color-purple-50: #7c3aed;
+    --color-purple-100: #a855f7;
+    --color-purple-200: #bf46ef;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(90deg, var(--color-purple-50), var(--color-dark-900));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#login-form{
+    background-color: var(--color-light-50);
+    
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    border-radius: 8px;
+    gap: 30px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.4);
+
+    animation: dark-to-light 0.3s ease-in-out;
+}
+
+
+
+
+
+#form-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#form-header h1{
+    font-size: 40px;
+    position: relative;
+}
+
+#form-header h1::before{
+    position: absolute;
+    content: '';
+    width: 45%;
+    background-color:  var(--color-purple-50);
+    height: 3px;
+    bottom: 5px;
+    border-radius: 5px;
+}
+
+#mode-icon{
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#social-media{
+    display: flex;
+    justify-content: space-around;
+}
+
+#social-media img{
+    width: 30px;
+}
+
+#social-media img:hover{
+    transform: scale(1.2);
+}
+
+#fields{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.field label{
+    font-size: 14px;
+    color: var(--color-dark-50);
+
+}
+
+.field .box{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 3px;
+    cursor: text;
+    border-bottom: 1px solid var(--color-purple-50);
+}
+
+
+.field .box i{
+    font-size: 18px;
+    color: var(--color-dark-900);
+}
+
+
+.field .box input{
+    border: none;
+    background-color: transparent;
+    width: 260px;
+    font-size: 18px;
+    padding: 0px 5px;
+}
+
+.field .box input:focus{
+    outline: none;
+}
+
+#forgot-password{
+    text-align: end;
+}
+
+#forgot-password a{
+    text-decoration: none;
+    font-size: 12px;
+    color: var(--color-dark-50);
+}
+
+#forgot-password a:hover{
+    color: var(--color-purple-50);
+}
+
+#login-button{
+    border: none;
+    background: linear-gradient(90deg, var(--color-purple-50), var(--color-purple-200));
+    color: var(--color-light-50);
+    padding: 7px;
+    font-size: 18px;
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#login-button:hover{
+    background: linear-gradient(90deg, var(--color-purple-200), var(--color-purple-50));
+}
+
+
+.dark#login-form{
+    color: var(--color-light-50);
+    background-color: var(--color-dark-100);
+
+    animation: light-to-dark 0.3s ease-in-out;
+}
+
+/*
+* Tema Dark
+*/
+
+.dark#login-form .field .box input,
+.dark#login-form .field .box i{
+    color: var(--color-light-50);
+}
+
+@keyframes dark-to-light{
+    0%{
+        background-color: var(--color-dark-100);
+    }
+    100%{
+        background-color: var(--color-light-50);
+    }
+}
+
+@keyframes light-to-dark{
+    0%{
+        background-color: var(--color-light-50);
+    }
+    100%{
+        background-color: var(--color-dark-100);
+    }
+}
